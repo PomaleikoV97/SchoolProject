@@ -3,22 +3,35 @@ package by.itstep.pomaleiko.javalessons.lesson22.model.logic.test;
 import static org.junit.Assert.*;
 
 import by.itstep.pomaleiko.javalessons.lesson22.model.logic.SchoolManager;
+import org.junit.AfterClass;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class SchoolManagerTest {
 
-    private int[][] groups;
+    private static int[][] groups;
 
-    @Before
-    public void init(){
-        System.out.println("@Before");
+    @BeforeClass
+    public static void init(){
         groups = new int[][] {
                 {7, 7, 8, 2},
                 {9, 8, 9, 10},
                 {7, 7, 1},
                 {8, 8, 10, 10}};
     }
+
+    @AfterClass
+
+//    @Before
+//    public void init(){
+//        System.out.println("@Before");
+//        groups = new int[][] {
+//                {7, 7, 8, 2},
+//                {9, 8, 9, 10},
+//                {7, 7, 1},
+//                {8, 8, 10, 10}};
+//    }
     @Test
     public void testCalculateAvgMarkPositive() {
         System.out.println("testCalculateAvgMarkPositive");
